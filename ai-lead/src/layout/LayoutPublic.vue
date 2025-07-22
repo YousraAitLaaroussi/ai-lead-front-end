@@ -9,6 +9,6 @@
 </template>
 
 <script setup>
-import AppNavigation from '../components/AppNavigation.vue'
-import AppFooter from '../components/AppFooter.vue'
+import AppNavigation from '../components/Layout/AppNavigation.vue'
+import AppFooter from '../components/Layout/AppFooter.vue'
 </script>
