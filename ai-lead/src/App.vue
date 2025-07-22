@@ -1,10 +1,13 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import Index from './pages/Index.vue';
+import pricing from './pages/pricing.vue';
 </script>
 
 <template>
-  <Index ></Index>
+   <!-- <Index ></Index> -->
+    <pricing ></pricing>
+    
 </template>
 
 <style scoped>
