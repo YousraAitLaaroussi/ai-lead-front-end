@@ -1,17 +1,14 @@
 <template>
-  <div>
-    <NavPublic></NavPublic> 
-    
+  <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <AppNavigation />
     <main>
-      <slot></slot>
+      <slot />
     </main>
-    
-    <footerPublic></footerPublic>
+    <AppFooter />
   </div>
 </template>
 
-<script>
-import NavPublic from '../components/NavPublic.vue'
-import footerPublic from '../components/footerPublic.vue'
-
+<script setup>
+import AppNavigation from '../components/AppNavigation.vue'
+import AppFooter from '../components/AppFooter.vue'
 </script>

@@ -1,11 +1,10 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import Index from './pages/Index.vue';
 </script>
 
 <template>
-  <h1 class="text-4xl font-bold text-red-600 p-4 border-4 border-blue-500 rounded-lg">
-    Hello Tailwind!
-  </h1>
+  <Index ></Index>
 </template>
 
 <style scoped>
