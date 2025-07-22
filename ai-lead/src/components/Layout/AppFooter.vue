@@ -46,7 +46,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import FooterColumn from './FooterColumn.vue'
+import FooterColumn from '../Layout/FooterColumn.vue'
 
 const productLinks = ref([
   { name: 'Features', href: '#' },
