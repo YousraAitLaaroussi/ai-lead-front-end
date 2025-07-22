@@ -3,7 +3,9 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <h1> hello </h1>
+  <h1 class="text-4xl font-bold text-red-600 p-4 border-4 border-blue-500 rounded-lg">
+    Hello Tailwind!
+  </h1>
 </template>
 
 <style scoped>
