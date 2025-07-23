@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
+  <LayoutClient>
     <!-- Header -->
     <div class="bg-white shadow-sm border-b border-gray-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,55 +45,57 @@
 
     <!-- Main Content -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
-        
-        <!-- Lead Information Cards -->
-        <div class="xl:col-span-2 ">
-          
-          <!-- Lead Header -->
-          <AppHeader :lead="lead" />
+  <div class="grid grid-cols-1 xl:grid-cols-4 gap-8">
+    
+    <!-- Lead Information Cards -->
+    <div class="col-span-3 p-4">
+      
+      <!-- Lead Header -->
+      <AppHeader :lead="lead" />
 
-          <!-- Contact Information -->
-          <ContactInformation :lead="lead" />
+      <!-- Contact Information -->
+      <ContactInformation :lead="lead" />
 
-          <!-- Call History -->
-          <CallHistory :calls="callHistory" />
+      <!-- Call History -->
+      <CallHistory :calls="callHistory" />
 
-        </div>
+    </div>
 
-        <!-- Activity & Notes Sidebar -->
-        <div class="space-y-6">
-          
-          <!-- Notes -->
-          <NotesCard 
-            :notes="lead.notes"
-            @add-note="handleAddNote"
-          />
+    <!-- Activity & Notes Sidebar -->
+    <div class="space-y-6">
+      
+      <!-- Notes -->
+      <NotesCard 
+        :notes="lead.notes"
+        @add-note="handleAddNote"
+      />
 
-          <!-- Activity Timeline -->
-          <ActivityTimeline :activities="activities" />
+      <!-- Activity Timeline -->
+      <ActivityTimeline :activities="activities" />
 
-          <!-- Quick Actions -->
-          <QuickActions 
-            @send-email="handleSendEmail"
-            @schedule-call="handleScheduleCall"
-            @add-task="handleAddTask"
-          />
+      <!-- Quick Actions -->
+      <QuickActions 
+        @send-email="handleSendEmail"
+        @schedule-call="handleScheduleCall"
+        @add-task="handleAddTask"
+      />
 
-        </div>
-      </div>
     </div>
   </div>
+</div>
+
+  </LayoutClient>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import AppHeader from '@/components/Layout/AppHeader.vue'
+
 import ContactInformation from '@/components/Lead/ContactInformation.vue'
 import CallHistory from '@/components/Lead/CallHistory.vue'
 import NotesCard from '@/components/Lead/NotesCard.vue'
 import ActivityTimeline from '@/components/Lead/ActivityTimeline.vue'
 import QuickActions from '@/components/Lead/QuickActions.vue'
+import LayoutClient from '../../layout/LayoutClient.vue'
 
 // Mock lead data
 const lead = ref({
