@@ -11,7 +11,6 @@ const count = ref(0)
 <template>
   <div>
 
-
   <h1>{{ msg }}</h1>
 
   <div class="card">
