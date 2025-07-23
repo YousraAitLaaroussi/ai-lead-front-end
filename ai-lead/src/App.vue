@@ -1,11 +1,16 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import Index from './pages/Index.vue';
+import pricing from './pages/pricing.vue';
+import ClientDashboard from './pages/ClientDashboard.vue'
 </script>
 
 <template>
-  <h1 class="text-4xl font-bold text-red-600 p-4 border-4 border-blue-500 rounded-lg">
-    Hello Tailwind!
-  </h1>
+   <!-- <Index ></Index> -->
+    <!-- <pricing ></pricing> -->
+    <!-- <ClientDashboard ></ClientDashboard> -->
+<router-view />
+    
 </template>
 
 <style scoped>
