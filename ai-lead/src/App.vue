@@ -9,6 +9,7 @@ import ClientDashboard from './pages/ClientDashboard.vue'
    <!-- <Index ></Index> -->
     <!-- <pricing ></pricing> -->
     <!-- <ClientDashboard ></ClientDashboard> -->
+     
 <router-view />
     
 </template>
