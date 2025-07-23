@@ -11,8 +11,8 @@
       </div>
     </div>
 
-    <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-      <div class="bg-white dark:bg-gray-800 py-8 px-4 shadow-lg sm:rounded-lg sm:px-10 border border-gray-200 dark:border-gray-700">
+    <div class="mt-8 mx-4 sm:mx-auto sm:w-full sm:max-w-md">
+  <div class="bg-white dark:bg-gray-800 py-8 px-4 shadow-lg rounded-2xl sm:px-10 border border-gray-200 dark:border-gray-700">
         <form @submit.prevent="handleSignUp" class="space-y-6">
           <!-- Full Name Field -->
           <div>
@@ -226,7 +226,7 @@
           <div class="text-center">
             <span class="text-sm text-gray-600 dark:text-gray-400">
               Already have an account?
-              <a href="#" @click="$emit('switch-to-signin')" class="font-medium text-[#0a2342] dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">
+              <a href="/login" @click="$emit('switch-to-signin')" class="font-medium text-[#0a2342] dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">
                 Sign in
               </a>
             </span>
@@ -238,7 +238,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive, computed , onMounted } from 'vue'
 
 // Form data
 const form = reactive({
@@ -270,6 +270,12 @@ const passwordStrength = computed(() => {
   
   return strength
 })
+onMounted(() => {
+window.scrollTo({ top: 0, behavior: 'smooth' })
+
+})
+  
+
 
 // Validation functions
 const validateFullName = () => {
