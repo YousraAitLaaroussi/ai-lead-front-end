@@ -26,6 +26,11 @@ const routes = [
     name: "Register",
     component: () => import("@/pages/auth/RegisterPage.vue"),
   },
+  {
+   path: "/leads",
+    name: "Leadlist",
+    component: () => import("@/pages/Client/LeadsPage.vue"),
+  },
 ]
 
 const router = createRouter({
