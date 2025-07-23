@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-    <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <div class=" sm:mx-auto sm:w-full sm:max-w-md">
       <!-- Brand Logo/Title -->
       <div class="text-center">
         <h1 class="text-3xl font-bold text-[#0a2342] dark:text-white mb-2">Stitch AI</h1>
@@ -11,8 +11,9 @@
       </div>
     </div>
 
-    <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-      <div class="bg-white dark:bg-gray-800 py-8 px-4 shadow-lg sm:rounded-lg sm:px-10 border border-gray-200 dark:border-gray-700">
+   <div class="mt-8 mx-4 sm:mx-auto sm:w-full sm:max-w-md">
+  <div class="bg-white dark:bg-gray-800 py-8 px-4 shadow-lg rounded-2xl sm:px-10 border border-gray-200 dark:border-gray-700">
+
         <form @submit.prevent="handleSignIn" class="space-y-6">
           <!-- Email Field -->
           <div>
@@ -146,7 +147,7 @@
           <div class="text-center">
             <span class="text-sm text-gray-600 dark:text-gray-400">
               Don't have an account?
-              <a href="#" @click="$emit('switch-to-signup')" class="font-medium text-[#0a2342] dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">
+              <a href="/register" @click="$emit('switch-to-signup')" class="font-medium text-[#0a2342] dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">
                 Sign up
               </a>
             </span>
