@@ -39,6 +39,8 @@
             :leads="paginatedLeads"
             @edit="handleEditLead"
             @delete="handleDeleteLead"
+            @detail="handleDetail"
+
           />
 
           <!-- Pagination -->
@@ -138,6 +140,13 @@ const handleEditLead = (lead) => {
   console.log('Edit lead:', lead)
   // Implement edit functionality
 }
+
+const handleDetail = (lead) => {
+  console.log('Detail lead:', lead)
+  // Navigate to static details page
+  window.location.href = '/leads/details'
+}
+
 
 const handleDeleteLead = (leadId) => {
   if (confirm('Are you sure you want to delete this lead?')) {
