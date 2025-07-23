@@ -181,6 +181,18 @@
       <main class="flex-1 m-10">
         <slot />
       </main>
+
+      <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 ">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
+        <p class=" ml-6">&copy; 2025 Your Company. All rights reserved.</p>
+        <div class="flex space-x-4 mt-2 md:mt-0 mr-6">
+          <a href="#" class=" hover:text-blue-500">Privacy</a>
+          <a href="#" class=" hover:text-blue-500">Terms</a>
+          <a href="#" class=" hover:text-blue-500 ">Contact</a>
+        </div>
+      </div>
+    </footer>
     </div>
   </div>
 </template>
