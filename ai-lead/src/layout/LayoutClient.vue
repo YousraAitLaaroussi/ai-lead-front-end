@@ -1,92 +1,152 @@
-<template>
-  <div class="min-h-screen bg-gray-50">
-    <!-- Mobile sidebar overlay -->
-    <div 
-      v-if="sidebarOpen" 
-      class="fixed inset-0 z-40 lg:hidden"
-      @click="sidebarOpen = false"
-    >
-      <div class="fixed inset-0 bg-gray-600 bg-opacity-75"></div>
-    </div>
 
-    <!-- Sidebar -->
-    <div :class="[
-      'fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0',
-      sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-    ]">
-      <div class="flex items-center justify-center h-16 px-4 border-b border-gray-200">
+<template>
+  <div class="min-h-screen bg-gray-50 flex">
+<aside
+:class="[
+  'fixed top-0 left-0 h-screen w-64 bg-white shadow-lg z-50 transition-transform duration-300 ease-in-out',
+  sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+]"
+
+>
+    
+      <div class="flex items-center justify-between h-16 px-4 border-b border-gray-200">
         <div class="flex items-center space-x-2">
-          <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          <div
+            class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"
+          >
+            <svg
+              class="w-5 h-5 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+              />
             </svg>
           </div>
           <span class="text-xl font-bold text-gray-900">LeadAI</span>
         </div>
+
+        <button
+          @click="sidebarOpen = false"
+          class="p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
       </div>
 
-      <nav class="mt-8 px-4">
-        <div class="space-y-2">
-          <SidebarLink
-            v-for="item in navigationItems"
-            :key="item.name"
-            :to="item.to"
-            :icon="item.icon"
-            :name="item.name"
-            :badge="item.badge"
-            @click="closeMobileSidebar"
-          />
-        </div>
+      <nav class="mt-8 px-4 space-y-2">
+        <SidebarLink
+          v-for="item in navigationItems"
+          :key="item.name"
+          :to="item.to"
+          :icon="item.icon"
+          :name="item.name"
+          :badge="item.badge"
+          @click="closeMobileSidebar"
+        />
       </nav>
 
-      <!-- Sidebar footer -->
-      <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200">
-        <div class="flex items-center space-x-3">
-          <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
-            <span class="text-white text-sm font-semibold">JD</span>
-          </div>
-          <div class="flex-1 min-w-0">
-            <div class="text-sm font-medium text-gray-900 truncate">John Doe</div>
-            <div class="text-xs text-gray-500 truncate">Premium Plan</div>
-          </div>
-        </div>
-      </div>
-    </div>
+   
+    </aside>
 
-    <!-- Main content -->
-    <div class="lg:pl-64">
-      <!-- Top navbar -->
-      <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-30">
-        <div class="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
-          <!-- Mobile menu button -->
-          <button
-            @click="sidebarOpen = !sidebarOpen"
-            class="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+   <div
+:class="[
+  'flex-1 flex flex-col min-h-screen transition-all duration-300',
+  sidebarOpen ? 'pl-64' : 'pl-0'
+]"
+
+    >
+   <header
+  class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-30 flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8"
+>
+
+        <button
+          v-if="!sidebarOpen"
+          @click="sidebarOpen = true"
+          class="p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
 
-          <!-- Page title -->
-          <div class="flex-1 lg:flex-none">
-            <h1 class="text-xl font-semibold text-gray-900 lg:hidden">{{ currentPageTitle }}</h1>
-          </div>
+        <div class="flex-1 lg:flex-none">
+        
+        </div>
 
-          <!-- Right side of navbar -->
           <div class="flex items-center space-x-4">
-            <!-- Notifications -->
-            <button class="relative p-2 text-gray-400 hover:text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-12"></path>
-              </svg>
-              <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-400 ring-2 ring-white"></span>
-            </button>
+            <!-- Search (hidden on mobile) -->
+            <div class="hidden md:block relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                class="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+            </div>
 
+            <!-- Notifications -->
+            <div class="relative">
+                <button 
+                  @click="toggleNotificationsDropdown"
+                  class="flex items-center p-2 text-gray-400 hover:text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-12" />
+                  </svg>
+                  <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-400 ring-2 ring-white"></span>
+                </button>
+            
+              <!-- Dropdown Notification-->
+              <transition name="fade">
+                <div
+                  v-if="notificationsDropdownOpen"
+                  class="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50"
+                  @click.stop
+                >
+                  <p class="px-4 py-2 text-sm text-gray-700 font-semibold">🔔 Notifications</p>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100">💬 You have a new message</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100">📦 Your order has shipped</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100">📅 Meeting at 3:00 PM</a>
+                </div>
+              
+              </transition>
+            </div>
             <!-- User dropdown -->
             <div class="relative">
               <button
-                @click="userDropdownOpen = !userDropdownOpen"
+                @click="toggleUserDropdown"
                 class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
@@ -97,7 +157,7 @@
                   <div class="text-xs text-gray-500">john@company.com</div>
                 </div>
                 <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7h5l-5 5-5-5h5v-12"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7h5v-12" />
                 </svg>
               </button>
 
@@ -115,27 +175,42 @@
               </div>
             </div>
           </div>
-        </div>
+      
       </header>
 
-      <!-- Page content -->
-      <main class="flex-1">
-        <div class="py-6">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Page header -->
-            <div class="hidden lg:block mb-8">
-              <h1 class="text-2xl font-bold text-gray-900">{{ currentPageTitle }}</h1>
-              <p class="mt-1 text-sm text-gray-500">{{ currentPageDescription }}</p>
-            </div>
-
-            <!-- Dynamic content -->
-            <router-view />
-          </div>
-        </div>
+      <main class="flex-1 m-10">
+        <slot />
       </main>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      sidebarOpen: false,
+      currentPageTitle: 'Dashboard',
+      currentPageDescription: 'Welcome to your dashboard',
+      navigationItems: [
+        // مثال عناصر القائمة
+        { name: 'Home', to: '/', icon: 'home', badge: null },
+        { name: 'Leads', to: '/leads', icon: 'user', badge: 5 },
+        // ... غيرها حسب احتياجك
+      ],
+    };
+  },
+  methods: {
+    closeMobileSidebar() {
+      // تغلق sidebar فالشاشات الصغيرة عند اختيار رابط
+      this.sidebarOpen = false;
+    },
+    
+  },
+};
+</script>
+
+
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
@@ -145,6 +220,7 @@ import SidebarLink from '../components/Layout/SidebarLink.vue'
 const route = useRoute()
 const sidebarOpen = ref(false)
 const userDropdownOpen = ref(false)
+const notificationsDropdownOpen = ref(false)
 
 const navigationItems = ref([
   {
@@ -216,7 +292,21 @@ const closeMobileSidebar = () => {
 const handleClickOutside = (event) => {
   if (userDropdownOpen.value && !event.target.closest('.relative')) {
     userDropdownOpen.value = false
+
   }
+   if (notificationsDropdownOpen.value && !event.target.closest('.relative')) {
+    notificationsDropdownOpen.value = false
+
+  }
+}
+
+const toggleUserDropdown = () => {
+  userDropdownOpen.value = !userDropdownOpen.value
+}
+
+const toggleNotificationsDropdown =() => {
+  notificationsDropdownOpen.value = !notificationsDropdownOpen.value
+
 }
 
 onMounted(() => {

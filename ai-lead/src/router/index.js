@@ -53,7 +53,16 @@ const routes = [
     title: 'Confirmation',
   },
 },
-
+  {
+   path: "/leads",
+    name: "Leadlist",
+    component: () => import("@/pages/Client/LeadsPage.vue"),
+  },
+  {
+   path: "/leads/details",
+    name: "LeadDetails",
+    component: () => import("@/pages/Client/LeadDetailPage.vue"),
+  },
 ]
 
 const router = createRouter({
