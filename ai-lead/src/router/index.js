@@ -58,10 +58,27 @@ const routes = [
     name: "Leadlist",
     component: () => import("@/pages/Client/LeadsPage.vue"),
   },
+   {
+    path: "/call-logs",
+    name: "call-logs",
+    component: () => import("@/pages/Client/call-logs.vue"),
+  },
   {
    path: "/leads/details",
     name: "LeadDetails",
     component: () => import("@/pages/Client/LeadDetailPage.vue"),
+  },
+
+  {
+   path: "/campaigne",
+    name: "campaigne",
+    component: () => import("@/pages/Client/Campaigns.vue"),
+  },
+
+   {
+   path: "/support",
+    name: "support",
+    component: () => import("@/pages/Client/SupportPage.vue"),
   },
 ]
 

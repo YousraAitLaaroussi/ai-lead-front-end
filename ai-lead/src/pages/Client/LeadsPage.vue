@@ -1,30 +1,24 @@
 
 <template>
-  <div class="flex min-h-screen bg-gray-100">
+  <LayoutClient>
+
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-4 sm:mb-0">Leads</h1>
+        <!-- ❌ Removed old button here -->
+      </div>
+
+  
     <!-- Sidebar -->
-    <AppSidebar
-      class="w-64 hidden lg:block"
-      :is-open="sidebarOpen"
-      :navigation-items="navigationItems"
-      @close="sidebarOpen = false"
-      @navigate="handleNavigation"
-    />
+    
 
     <!-- Main content area -->
     <div class="flex-1 flex flex-col">
-      <AppHeader
-        
-        :user="currentUser"
-        @toggle-sidebar="sidebarOpen = true"
-      />
+      
 
       <main class="flex-1 p-4 sm:p-6 overflow-y-auto">
         <div class="max-w-7xl mx-auto">
           <!-- Page header -->
-          <div class="mb-6">
-            <h1 class="text-2xl font-bold text-gray-900">Leads</h1>
-           
-          </div>
+          
 
           <!-- Search and filters -->
           <SearchBar 
@@ -57,17 +51,17 @@
       
       </main>
     </div>
-  </div>
+  </LayoutClient>
 </template>
 
 
 <script setup>
 import { ref, computed, watch } from 'vue'
-import AppSidebar from '@/components/Layout/AppSidebar.vue'
-import AppHeader from '@/components/Layout/AppHeader.vue'
+import SidebarLink from '@/components/Layout/SidebarLink.vue'
 import SearchBar from '@/components/Layout/SearchBar.vue'
 import LeadsTable from '@/components/Layout/LeadsTable.vue'
 import Pagination from '@/components/Layout/Pagination.vue'
+import LayoutClient from '../../layout/LayoutClient.vue'
 
 // State
 const sidebarOpen = ref(false)

@@ -11,6 +11,7 @@
 </template>
 
 <script setup>
+
 import HeroSection from '../components/HomePage/HeroSection.vue'
 import FeaturesSection from '../components/HomePage/FeaturesSection.vue'
 import HowItWorksSection from '../components/HomePage/HowltWorksSection.vue'
