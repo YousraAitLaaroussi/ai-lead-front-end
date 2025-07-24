@@ -42,6 +42,12 @@ const routes = [
     name: "campaigne",
     component: () => import("@/pages/Client/Campaigns.vue"),
   },
+
+   {
+   path: "/support",
+    name: "support",
+    component: () => import("@/pages/Client/SupportPage.vue"),
+  },
 ]
 
 const router = createRouter({
