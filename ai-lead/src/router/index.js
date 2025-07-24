@@ -31,6 +31,11 @@ const routes = [
     name: "Leadlist",
     component: () => import("@/pages/Client/LeadsPage.vue"),
   },
+   {
+    path: "/call-logs",
+    name: "call-logs",
+    component: () => import("@/pages/Client/call-logs.vue"),
+  },
   {
    path: "/leads/details",
     name: "LeadDetails",
