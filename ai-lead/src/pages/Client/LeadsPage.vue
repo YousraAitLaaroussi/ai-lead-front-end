@@ -1,6 +1,12 @@
 
 <template>
   <LayoutClient>
+
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-4 sm:mb-0">Leads</h1>
+        <!-- ❌ Removed old button here -->
+      </div>
+
   
     <!-- Sidebar -->
     
