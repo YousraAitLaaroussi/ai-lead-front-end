@@ -36,6 +36,12 @@ const routes = [
     name: "LeadDetails",
     component: () => import("@/pages/Client/LeadDetailPage.vue"),
   },
+
+  {
+   path: "/campaigne",
+    name: "campaigne",
+    component: () => import("@/pages/Client/Campaigns.vue"),
+  },
 ]
 
 const router = createRouter({
