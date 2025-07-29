@@ -1,14 +1,16 @@
 <template>
+<LayoutAdmin>
   
-  <div class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20 transition-all duration-500">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  
+  <!-- <div class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20 transition-all duration-500"> -->
+    <div class="">
       <!-- Header Section -->
       <div class="mb-6">
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div class="space-y-2">
-            <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
-              Client Management
-            </h1>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
+            Client Management
+          </h1>
             <p class="text-gray-600 dark:text-gray-400">
               Manage your clients efficiently
             </p>
@@ -572,7 +574,8 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
+  </LayoutAdmin>
 </template>
 
 <script setup>
@@ -601,6 +604,8 @@ import {
   Power,
   PowerOff,
 } from 'lucide-vue-next'
+import LayoutAdmin from '../../layout/LayoutAdmin.vue'
+
 
 // State
 const darkMode = ref(false)

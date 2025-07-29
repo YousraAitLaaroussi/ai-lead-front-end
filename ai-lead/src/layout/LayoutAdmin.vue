@@ -199,7 +199,7 @@ const userDropdownOpen = ref(false)
 const notificationsDropdownOpen = ref(false)
 
 const navigationItems = [
-  { name: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
+  { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
   { name: 'Clients', href: '/client/leads', icon: Users, badge: 12 },
   { name: 'Plans', href: '/client/campaigns', icon: CreditCard },
   { name: 'Live Calls', href: '/call-logs', icon: Phone },
