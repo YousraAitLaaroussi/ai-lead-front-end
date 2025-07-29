@@ -257,7 +257,7 @@ const goBackToPlans = () => {
   router.push('/plans')
 }
 const handeleselect = ()=> {
-    router.push('checkoutConfirmation')
+    router.push('/checkoutConfirmation')
 
 }
 </script>
