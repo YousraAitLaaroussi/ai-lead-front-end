@@ -43,6 +43,7 @@ import { ref } from 'vue'
 import Pricingplan from '../components/Plan/Pricingplan.vue'
 import ProgressBar from '../components/Plan/ProgressBar.vue'
 import LayoutPublic from '../layout/LayoutPublic.vue'
+import { useRouter } from 'vue-router'
 
 const plans = ref([
   {
@@ -103,10 +104,13 @@ const plans = ref([
     planType: 'enterprise'
   }
 ])
+const router = useRouter()
 
 const selectedPlanId = ref(null)
 
 function handleSelect(selectedPlan) {
   selectedPlanId.value = selectedPlan.id
+    router.push('/paiment')
+
 }
 </script>

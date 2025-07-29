@@ -38,21 +38,16 @@ const routes = [
     },
   },
   {
-  path: '/checkout',
-  name: 'Checkout',
-  component: () => import('../pages/Checkout.vue'),
-  meta: {
-    title: 'Checkout',
+    path: '/paiment',
+    name: 'Paiment',
+    component: () => import('@/pages/CheckotPaiment.vue'),
   },
-},
-{
-  path: '/confirmation',
-  name: 'Confirmation',
-  component: () => import('../pages/Confirmation.vue'),
-  meta: {
-    title: 'Confirmation',
+ 
+ {
+    path: "/checkoutConfirmation",
+    name: "CheckoutConfirmation",
+    component: ()=> import('@/pages/CheckoutConfirmationPage.vue'),
   },
-},
   {
    path: "/leads",
     name: "Leadlist",
