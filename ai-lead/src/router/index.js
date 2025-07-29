@@ -63,6 +63,16 @@ const routes = [
     name: "LeadDetails",
     component: () => import("@/pages/Client/LeadDetailPage.vue"),
   },
+   {
+    path: "/Client/ai-intents",
+    name: "ai-intents",
+    component: () => import("@/pages/Client/ai-intents.vue"),
+  },
+   {
+    path: "/Client/billing",
+    name: "billing",
+    component: () => import("@/pages/Client/billing-plan.vue"),
+  },
 
   {
    path: "/campaigne",
@@ -80,6 +90,22 @@ const routes = [
     name: "AdminUsers",
     component: () => import("@/pages/AdminUsers.vue"),
   },
+
+  {
+   path: "/clientmanagment",
+    name: "client",
+    component: () => import("@/pages/Admin/ClientManagment.vue"),
+  }, 
+  {
+   path: "/CallMonitor",
+    name: "call",
+    component: () => import("@/pages/Admin/CallMonitor.vue"),
+  },
+   {
+   path: "/admin/dashboard",
+    name: "AdminDashboard",
+    component: () => import("@/pages/Admin/AdminDashboard.vue"),
+  }
 ]
 
 const router = createRouter({

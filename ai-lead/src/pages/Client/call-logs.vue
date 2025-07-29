@@ -1,5 +1,5 @@
 <template>
-    <layout-client>
+    <LayoutClient>
         <div class="space-y-6">
             <!-- Page Header -->
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
@@ -498,7 +498,7 @@
                 </div>
             </div>
         </div>
-    </layout-client>
+   </LayoutClient>
 </template>
 
 <script setup>
