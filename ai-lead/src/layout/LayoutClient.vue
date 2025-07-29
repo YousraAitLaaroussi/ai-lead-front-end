@@ -248,7 +248,7 @@ const navigationItems = ref([
   },
   {
     name: 'Campaigns',
-    to: '/client/campaigns',
+    to: '/campaigne',
     icon: 'M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z'
   },
   {
@@ -273,7 +273,7 @@ const navigationItems = ref([
   },
   {
     name: 'Support',
-    to: '/client/support',
+    to: '/support',
     icon: 'M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z'
   }
 ])
