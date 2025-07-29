@@ -318,7 +318,7 @@ import {
   Menu, X, BarChart3, Users, Phone, Target, Brain, CreditCard, Settings,
   Sun, Moon, Calendar, Check, Download, Pause, ArrowDown, AlertTriangle
 } from 'lucide-vue-next'
-import LayoutClient from '../../layout/LayoutAdmin.vue'
+import LayoutClient from '../../layout/LayoutClient.vue'
 // Reactive data
 const sidebarOpen = ref(false)
 const darkMode = ref(false)
