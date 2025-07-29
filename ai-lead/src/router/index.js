@@ -41,6 +41,16 @@ const routes = [
     name: "LeadDetails",
     component: () => import("@/pages/Client/LeadDetailPage.vue"),
   },
+   {
+    path: "/Client/ai-intents",
+    name: "ai-intents",
+    component: () => import("@/pages/Client/ai-intents.vue"),
+  },
+   {
+    path: "/Client/billing",
+    name: "billing",
+    component: () => import("@/pages/Client/billing-plan.vue"),
+  }
 ]
 
 const router = createRouter({
