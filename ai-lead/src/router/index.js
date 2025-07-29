@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+// Pages
+import Plans from '../pages/Plans.vue'
+
 const routes = [
   {
     path: '/',
@@ -11,20 +14,39 @@ const routes = [
     name: 'Dashboard',
     component: () => import('../pages/ClientDashboard.vue'),
   },
-    {
+  {
     path: '/pricing',
     name: 'Pricing',
     component: () => import('../pages/pricing.vue'),
   },
   {
-    path: "/login",
-    name: "Login",
-    component: () => import("@/pages/auth/LoginPage.vue"),
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/pages/auth/LoginPage.vue'),
   },
   {
-    path: "/register",
-    name: "Register",
-    component: () => import("@/pages/auth/RegisterPage.vue"),
+    path: '/register',
+    name: 'Register',
+    component: () => import('@/pages/auth/RegisterPage.vue'),
+  },
+  {
+    path: '/plans',
+    name: 'Plans',
+    component: Plans,
+    meta: {
+      title: 'Choose Your Plan',
+    },
+  },
+  {
+    path: '/paiment',
+    name: 'Paiment',
+    component: () => import('@/pages/CheckotPaiment.vue'),
+  },
+ 
+ {
+    path: "/checkoutConfirmation",
+    name: "CheckoutConfirmation",
+    component: ()=> import('@/pages/CheckoutConfirmationPage.vue'),
   },
   {
    path: "/leads",
@@ -64,6 +86,14 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+})
+
+// Set page title dynamically
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  next()
 })
 
 export default router
