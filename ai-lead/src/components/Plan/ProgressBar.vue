@@ -62,8 +62,8 @@ const route = useRoute()
 const steps = [
   { path: '/register', label: 'Register' },
   { path: '/plans', label: 'Plan' },
-  { path: '/checkout', label: 'Checkout' },
-  { path: '/confirmation', label: 'Confirmation' }
+  { path: '/paiment', label: 'Paiment' },
+  { path: '/checkoutConfirmation', label: 'Confirmation' }
 ]
 
 const currentIndex = ref(0)
