@@ -72,7 +72,7 @@ const routes = [
     path: "/Client/billing",
     name: "billing",
     component: () => import("@/pages/Client/billing-plan.vue"),
-  }
+  },
 
   {
    path: "/campaigne",
@@ -91,6 +91,11 @@ const routes = [
     name: "client",
     component: () => import("@/pages/Admin/ClientManagment.vue"),
   },
+   {
+   path: "/admin/dashboard",
+    name: "AdminDashboard",
+    component: () => import("@/pages/Admin/AdminDashboard.vue"),
+  }
 ]
 
 const router = createRouter({
