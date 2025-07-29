@@ -176,7 +176,8 @@
 
           <!-- Sign Up Button -->
           <div>
-            <button
+            <router-link
+            to="/plans"
               type="submit"
               :disabled="isLoading || !form.acceptTerms"
               class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-[#0a2342] hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0a2342] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
@@ -188,7 +189,7 @@
                 </svg>
               </span>
               {{ isLoading ? 'Creating account...' : 'Create account' }}
-            </button>
+            </router-link>
           </div>
 
           <!-- OAuth Divider -->
@@ -239,6 +240,7 @@
 
 <script setup>
 import { ref, reactive, computed , onMounted } from 'vue'
+
 
 // Form data
 const form = reactive({

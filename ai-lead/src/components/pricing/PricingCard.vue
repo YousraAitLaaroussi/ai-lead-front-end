@@ -74,6 +74,7 @@ const props = defineProps({
     type: Boolean,
     default: false
   }
+  
 })
 
 const { plan, isYearly, isPopular } = props;
