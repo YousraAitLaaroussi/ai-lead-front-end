@@ -53,6 +53,12 @@ const routes = [
     name: "support",
     component: () => import("@/pages/Client/SupportPage.vue"),
   },
+
+  {
+   path: "/clientmanagment",
+    name: "client",
+    component: () => import("@/pages/Admin/ClientManagment.vue"),
+  },
 ]
 
 const router = createRouter({
