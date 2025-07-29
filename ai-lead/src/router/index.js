@@ -96,6 +96,11 @@ const routes = [
     name: "call",
     component: () => import("@/pages/Admin/CallMonitor.vue"),
   },
+   {
+   path: "/admin/dashboard",
+    name: "AdminDashboard",
+    component: () => import("@/pages/Admin/AdminDashboard.vue"),
+  }
 ]
 
 const router = createRouter({
