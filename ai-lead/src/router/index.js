@@ -100,7 +100,23 @@ const routes = [
    path: "/admin/dashboard",
     name: "AdminDashboard",
     component: () => import("@/pages/Admin/AdminDashboard.vue"),
-  }
+  },
+  {
+   path: "/Terms",
+    name: "terms",
+    component: () => import("@/layout/PT/TermsOfService.vue"),
+  },
+
+   {
+   path: "/privacy",
+    name: "privacy",
+    component: () => import("@/layout/PT/PrivacyPolicy.vue"),
+  },
+    {
+   path: "/prfsetting",
+    name: "setting",
+    component: () => import("@/pages/Client/ProfileSettings.vue"),
+  },
 ]
 
 const router = createRouter({
