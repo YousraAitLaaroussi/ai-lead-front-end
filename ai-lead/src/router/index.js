@@ -105,6 +105,11 @@ const routes = [
    path: "/admin/dashboard",
     name: "AdminDashboard",
     component: () => import("@/pages/Admin/AdminDashboard.vue"),
+  },
+   {
+   path: "/systemlogs",
+    name: "Systemlogs",
+    component: () => import("@/pages/SystemLogs.vue"),
   }
 ]
 
