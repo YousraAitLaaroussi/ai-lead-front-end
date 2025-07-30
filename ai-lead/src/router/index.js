@@ -110,7 +110,8 @@ const routes = [
    path: "/admin/Plans",
     name: "Admin-Plans",
     component: () => import("@/pages/Admin/AdminPlansPage.vue"),
-  {
+   },
+   {
    path: "/Terms",
     name: "terms",
     component: () => import("@/layout/PT/TermsOfService.vue"),
