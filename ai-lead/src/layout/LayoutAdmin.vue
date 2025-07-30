@@ -203,9 +203,9 @@ const navigationItems = [
   { name: 'Clients', href: '/client/leads', icon: Users, badge: 12 },
   { name: 'Plans', href: '/client/campaigns', icon: CreditCard },
   { name: 'Live Calls', href: '/call-logs', icon: Phone },
-  { name: 'System Logs', href: '/client/ai-intents', icon: FileText },
+  { name: 'System Logs', href: '/systemlogs', icon: FileText },
   { name: 'Settings', href: '/client/billing', icon: Settings },
-  { name: 'Admin Users', href: '/client/settings', icon: UserCog },
+  { name: 'Admin Users', href: 'admin/users', icon: UserCog },
   { name: 'Reports', href: '/client/support', icon: BarChart3 }
 ]
 

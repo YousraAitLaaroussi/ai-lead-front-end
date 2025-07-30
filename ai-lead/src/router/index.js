@@ -85,6 +85,11 @@ const routes = [
     name: "support",
     component: () => import("@/pages/Client/SupportPage.vue"),
   },
+   {
+    path: "/admin/users",
+    name: "AdminUsers",
+    component: () => import("@/pages/AdminUsers.vue"),
+  },
 
   {
    path: "/clientmanagment",
@@ -117,6 +122,11 @@ const routes = [
     name: "setting",
     component: () => import("@/pages/Client/ProfileSettings.vue"),
   },
+   {
+   path: "/systemlogs",
+    name: "Systemlogs",
+    component: () => import("@/pages/SystemLogs.vue"),
+  }
 ]
 
 const router = createRouter({

@@ -13,3 +13,4 @@ import ClientDashboard from './pages/ClientDashboard.vue'
 <router-view />
     
 </template>
+
