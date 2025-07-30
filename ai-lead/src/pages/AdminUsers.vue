@@ -1,5 +1,5 @@
 <template>
-  <LayoutClient>
+  <LayoutAdmin>
     <div class="min-h-screen bg-gray-50">
       <!-- Header -->
       <div class="bg-white border-b border-gray-200 px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -67,13 +67,13 @@
 
       </div>
     </div>
-  </LayoutClient>
+  </LayoutAdmin>
 </template>
 
 <script setup>
 import { ref, reactive, computed, onMounted } from 'vue'
 import { Plus } from 'lucide-vue-next'
-import LayoutClient from '@/layout/LayoutClient.vue'
+import LayoutAdmin from '@/layout/LayoutAdmin.vue'
 import UserFilters from '@/components/admin/UserFilters.vue'
 import UserTable from '@/components/admin/UserTable.vue'
 import UserModal from '@/components/admin/UserModal.vue'
