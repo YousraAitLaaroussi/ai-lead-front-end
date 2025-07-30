@@ -167,7 +167,7 @@
                 class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200"
                 @click.stop
               >
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
+                <a href="/prfsetting" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account Settings</a>
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Billing</a>
                 <div class="border-t border-gray-100"></div>
@@ -187,9 +187,9 @@
       <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
         <p class=" ml-6">&copy; 2025 Your Company. All rights reserved.</p>
         <div class="flex space-x-4 mt-2 md:mt-0 mr-6">
-          <a href="#" class=" hover:text-blue-500">Privacy</a>
-          <a href="#" class=" hover:text-blue-500">Terms</a>
-          <a href="#" class=" hover:text-blue-500 ">Contact</a>
+          <a href="/privacy" class=" hover:text-blue-500">Privacy</a>
+          <a href="/Terms" class=" hover:text-blue-500">Terms</a>
+          <a href="/privacy" class=" hover:text-blue-500 ">Contact</a>
         </div>
       </div>
     </footer>
