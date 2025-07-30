@@ -162,8 +162,8 @@
         >
           <p class="ml-6">&copy; 2025 Your Company. All rights reserved.</p>
           <div class="flex space-x-4 mt-2 md:mt-0 mr-6">
-            <a href="#" class="hover:text-blue-500">Privacy</a>
-            <a href="#" class="hover:text-blue-500">Terms</a>
+            <a href="/privacy" class=" hover:text-blue-500">Privacy</a>
+          <a href="/Terms" class=" hover:text-blue-500">Terms</a>
             <a href="#" class="hover:text-blue-500">Contact</a>
           </div>
         </div>
@@ -202,6 +202,7 @@ const navigationItems = [
   { name: 'Client', href: '/client-managment', icon: Users, badge: 12 },
   { name: 'Plans', href: '/admin/Plans', icon: CreditCard },
   { name: 'ai-intents', href: '/admin/ai-intents', icon: FileText },
+  { name: 'System Logs', href: '/systemlogs', icon: FileText },
   { name: 'Settings', href: '/client/billing', icon: Settings },
   { name: 'AdminUsers', href: '/admin/users', icon: UserCog },
   { name: 'Reports', href: '/client/support', icon: BarChart3 }

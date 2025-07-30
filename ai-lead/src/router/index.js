@@ -110,6 +110,26 @@ const routes = [
    path: "/admin/Plans",
     name: "Admin-Plans",
     component: () => import("@/pages/Admin/AdminPlansPage.vue"),
+  {
+   path: "/Terms",
+    name: "terms",
+    component: () => import("@/layout/PT/TermsOfService.vue"),
+  },
+
+   {
+   path: "/privacy",
+    name: "privacy",
+    component: () => import("@/layout/PT/PrivacyPolicy.vue"),
+  },
+    {
+   path: "/prfsetting",
+    name: "setting",
+    component: () => import("@/pages/Client/ProfileSettings.vue"),
+  },
+   {
+   path: "/systemlogs",
+    name: "Systemlogs",
+    component: () => import("@/pages/SystemLogs.vue"),
   }
 ]
 
