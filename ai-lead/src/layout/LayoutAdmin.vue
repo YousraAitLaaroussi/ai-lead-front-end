@@ -142,7 +142,6 @@
               @click.stop
             >
               <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account Settings</a>
               <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Billing</a>
               <div class="border-t border-gray-100"></div>
               <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
@@ -199,13 +198,12 @@ const userDropdownOpen = ref(false)
 const notificationsDropdownOpen = ref(false)
 
 const navigationItems = [
-  { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-  { name: 'Clients', href: '/client/leads', icon: Users, badge: 12 },
-  { name: 'Plans', href: '/client/campaigns', icon: CreditCard },
-  { name: 'Live Calls', href: '/call-logs', icon: Phone },
-  { name: 'System Logs', href: '/client/ai-intents', icon: FileText },
+  { name: 'Admin-Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
+  { name: 'Client', href: '/client-managment', icon: Users, badge: 12 },
+  { name: 'Plans', href: '/admin/Plans', icon: CreditCard },
+  { name: 'ai-intents', href: '/admin/ai-intents', icon: FileText },
   { name: 'Settings', href: '/client/billing', icon: Settings },
-  { name: 'Admin Users', href: '/client/settings', icon: UserCog },
+  { name: 'AdminUsers', href: '/admin/users', icon: UserCog },
   { name: 'Reports', href: '/client/support', icon: BarChart3 }
 ]
 

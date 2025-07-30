@@ -50,12 +50,12 @@ const routes = [
   },
   {
    path: "/leads",
-    name: "Leadlist",
+    name: "Leads",
     component: () => import("@/pages/Client/LeadsPage.vue"),
   },
    {
     path: "/call-logs",
-    name: "call-logs",
+    name: "Call-Logs",
     component: () => import("@/pages/Client/call-logs.vue"),
   },
   {
@@ -64,19 +64,19 @@ const routes = [
     component: () => import("@/pages/Client/LeadDetailPage.vue"),
   },
    {
-    path: "/Client/ai-intents",
-    name: "ai-intents",
+    path: "/admin/ai-intents",
+    name: "Ai-Intents",
     component: () => import("@/pages/Client/ai-intents.vue"),
   },
    {
-    path: "/Client/billing",
-    name: "billing",
+    path: "/billing",
+    name: "Billing",
     component: () => import("@/pages/Client/billing-plan.vue"),
   },
 
   {
    path: "/campaigne",
-    name: "campaigne",
+    name: "Campaigne",
     component: () => import("@/pages/Client/Campaigns.vue"),
   },
 
@@ -92,19 +92,24 @@ const routes = [
   },
 
   {
-   path: "/clientmanagment",
-    name: "client",
+   path: "/client-managment",
+    name: "Client",
     component: () => import("@/pages/Admin/ClientManagment.vue"),
   }, 
   {
-   path: "/CallMonitor",
-    name: "call",
+   path: "/call-monitor",
+    name: "Call-Monitor",
     component: () => import("@/pages/Admin/CallMonitor.vue"),
   },
    {
    path: "/admin/dashboard",
-    name: "AdminDashboard",
+    name: "Admin-Dashboard",
     component: () => import("@/pages/Admin/AdminDashboard.vue"),
+  },
+   {
+   path: "/admin/Plans",
+    name: "Admin-Plans",
+    component: () => import("@/pages/Admin/AdminPlansPage.vue"),
   }
 ]
 

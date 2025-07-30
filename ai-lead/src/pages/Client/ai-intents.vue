@@ -1,5 +1,5 @@
 <template>
-     <LayoutClient>
+     <LayoutAdmin>
   <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
     <main >
       <!-- Campaign Selection -->
@@ -180,7 +180,7 @@
       </div>
     </div>
   </div>
- </LayoutClient>
+ </LayoutAdmin>
 </template>
 
 
@@ -190,7 +190,7 @@ import {
     Menu, X, BarChart3, Users, Phone, Target, Brain, CreditCard, Settings,
     Sun, Moon, Plus, RefreshCw, Search, Edit, Trash2, TrendingUp, Clock
 } from 'lucide-vue-next'
-import LayoutClient from '../../layout/LayoutClient.vue'
+import LayoutAdmin from '../../layout/LayoutAdmin.vue'
 import { Eye, EyeOff } from 'lucide-vue-next'
 // Reactive data
 const sidebarOpen = ref(false)

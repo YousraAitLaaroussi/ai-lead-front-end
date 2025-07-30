@@ -131,8 +131,7 @@
                 Add Intent
               </button>
               <button @click="retrainModel" :disabled="isRetraining" class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-lg shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-600 disabled:opacity-50">
-                <RefreshCw class="w-4 h-4 mr-2" :class="{ 'animate-spin': isRetraining }" />
-                {{ isRetraining ? 'Retraining...' : 'Retrain Model' }}
+               
               </button>
             </div>
             
